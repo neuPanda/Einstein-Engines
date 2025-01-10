@@ -8,6 +8,7 @@ namespace Content.Shared.CCVar
     [CVarDefs]
     public sealed class CCVars : CVars
     {
+        #region Server
         /*
          * Server
          */
@@ -30,6 +31,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<string> RulesHeader =
             CVarDef.Create("server.rules_header", "ui-rules-header", CVar.REPLICATED | CVar.SERVER);
 
+        #endregion
+        #region Ambience
         /*
          * Ambience
          */
@@ -88,6 +91,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<float> InterfaceVolume =
             CVarDef.Create("audio.interface_volume", 0.50f, CVar.ARCHIVE | CVar.CLIENTONLY);
 
+        #endregion
+        #region Status
         /*
          * Status
          */
@@ -98,6 +103,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<string> StatusMoMMIPassword =
             CVarDef.Create("status.mommipassword", "", CVar.SERVERONLY | CVar.CONFIDENTIAL);
 
+        #endregion
+        #region Events
         /*
          * Events
          */
@@ -122,6 +129,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<float>
             EventsRampingAverageChaos = CVarDef.Create("events.ramping_average_chaos", 6f, CVar.ARCHIVE | CVar.SERVERONLY);
 
+        #endregion
+        #region Game
         /*
          * Game
          */
@@ -436,6 +445,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<string> RoundEndSoundCollection =
             CVarDef.Create("game.round_end_sound_collection", "RoundEnd", CVar.SERVERONLY);
 
+        #endregion
+        #region Announcers
 
         /*
          * Announcers
@@ -466,6 +477,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<float> AnnouncerVolume =
             CVarDef.Create("announcer.volume", 0.5f, CVar.ARCHIVE | CVar.CLIENTONLY);
 
+        #endregion
+        #region Queue
 
         /*
          * Queue
@@ -478,6 +491,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<bool> QueueEnabled =
             CVarDef.Create("queue.enabled", false, CVar.SERVERONLY);
 
+        #endregion
+        #region Discord
 
         /*
          * Discord
@@ -537,6 +552,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<string> DiscordAuthApiKey =
             CVarDef.Create("discord.auth_api_key", "", CVar.SERVERONLY | CVar.CONFIDENTIAL);
 
+        #endregion
+        #region Suspicion
 
         /*
          * Suspicion
@@ -557,6 +574,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<int> SuspicionMaxTimeSeconds =
             CVarDef.Create("suspicion.max_time_seconds", 300);
 
+        #endregion
+        #region Traitor
         /*
          * Traitor
          */
@@ -588,6 +607,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<float> TraitorStartDelayVariance =
             CVarDef.Create("traitor.start_delay_variance", 3f * 60f);
 
+        #endregion
+        #region TraitorDeathMatch
         /*
          * TraitorDeathMatch
          */
@@ -595,6 +616,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<int> TraitorDeathMatchStartingBalance =
             CVarDef.Create("traitordm.starting_balance", 20);
 
+        #endregion
+        #region Zombie
         /*
          * Zombie
          */
@@ -602,6 +625,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<int> ZombieMinPlayers =
             CVarDef.Create("zombie.min_players", 20);
 
+        #endregion
+        #region Pirates
         /*
          * Pirates
          */
@@ -615,6 +640,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<int> PiratesPlayersPerOp =
             CVarDef.Create("pirates.players_per_pirate", 5);
 
+        #endregion
+        #region Nukeops
         /*
          * Nukeops
          */
@@ -622,6 +649,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<bool> NukeopsSpawnGhostRoles =
             CVarDef.Create("nukeops.spawn_ghost_roles", false);
 
+        #endregion
+        #region Tips
         /*
          * Tips
          */
@@ -654,6 +683,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<string> LoginTipsDataset =
             CVarDef.Create("tips.login_dataset", "Tips");
 
+        #endregion
+        #region Console
         /*
          * Console
          */
@@ -668,6 +699,8 @@ namespace Content.Shared.CCVar
             CVarDef.Create("console.login_host_user", "", CVar.ARCHIVE | CVar.SERVERONLY);
 
 
+        #endregion
+        #region Database stuff
         /*
          * Database stuff
          */
@@ -742,6 +775,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<bool> DatabaseSynchronous =
             CVarDef.Create("database.sync", false, CVar.SERVERONLY);
 
+        #endregion
+        #region Interface
         /*
          * Interface
          */
@@ -752,6 +787,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<string> UIHoverSound =
             CVarDef.Create("interface.hover_sound", "/Audio/UserInterface/hover.ogg", CVar.REPLICATED);
 
+        #endregion
+        #region Outline
         /*
          * Outline
          */
@@ -760,6 +797,8 @@ namespace Content.Shared.CCVar
             CVarDef.Create("outline.enabled", true, CVar.CLIENTONLY);
 
 
+        #endregion
+        #region Parallax
         /*
          * Parallax
          */
@@ -773,6 +812,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<bool> ParallaxLowQuality =
             CVarDef.Create("parallax.low_quality", false, CVar.ARCHIVE | CVar.CLIENTONLY);
 
+        #endregion
+        #region Physics
         /*
          * Physics
          */
@@ -798,6 +839,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<bool> MobPushing =
             CVarDef.Create("physics.mob_pushing", false, CVar.REPLICATED);
 
+        #endregion
+        #region Music
         /*
          * Music
          */
@@ -808,6 +851,10 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<bool> EventMusicEnabled =
             CVarDef.Create("ambience.event_music_enabled", true, CVar.ARCHIVE | CVar.CLIENTONLY);
 
+        #endregion
+        #region Sounds
+        #region Specific Sounds
+
         /*
          * Specific Sounds
          */
@@ -815,7 +862,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<bool> RestartSoundsEnabled =
             CVarDef.Create("ambience.restart_sounds_enabled", true, CVar.ARCHIVE | CVar.CLIENTONLY);
 
-
+        #endregion
+        #region Admin Sounds
         /*
          * Admin sounds
          */
@@ -827,6 +875,9 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<float> AdminChatSoundVolume =
             CVarDef.Create("audio.admin_chat_sound_volume", -5f, CVar.ARCHIVE | CVar.CLIENT | CVar.REPLICATED);
 
+        #endregion
+        #endregion
+        #region HUD
         /*
          * HUD
          */
@@ -852,6 +903,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<bool> HudFpsCounterVisible =
             CVarDef.Create("hud.fps_counter_visible", false, CVar.CLIENTONLY | CVar.ARCHIVE);
 
+        #endregion
+        #region NPCs
         /*
          * NPCs
          */
@@ -866,6 +919,8 @@ namespace Content.Shared.CCVar
         /// </summary>
         public static readonly CVarDef<bool> NPCPathfinding = CVarDef.Create("npc.pathfinding", true);
 
+        #endregion
+        #region Net
         /*
          * Net
          */
@@ -879,6 +934,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<int> GasOverlayThresholds =
             CVarDef.Create("net.gasoverlaythresholds", 20);
 
+        #endregion
+        #region Admin
         /*
          * Admin
          */
@@ -989,6 +1046,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<float> AdminAfkTime =
             CVarDef.Create("admin.afk_time", 600f, CVar.SERVERONLY);
 
+        #endregion
+        #region Explosions
         /*
          * Explosions
          */
@@ -1088,6 +1147,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<int> ExplosionSingleTickAreaLimit =
             CVarDef.Create("explosion.single_tick_area_limit", 400, CVar.SERVERONLY);
 
+        #endregion
+        #region Radiation
         /*
          * Radiation
          */
@@ -1118,6 +1179,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<float> RadiationGridcastMaxDistance =
             CVarDef.Create("radiation.gridcast.max_distance", 50f, CVar.SERVERONLY);
 
+        #endregion
+        #region Admin logs
         /*
          * Admin logs
          */
@@ -1150,6 +1213,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<string> AdminLogsServerName =
             CVarDef.Create("adminlogs.server_name", "unknown", CVar.SERVERONLY);
 
+        #endregion
+        #region Atmos
         /*
          * Atmos
          */
@@ -1340,6 +1405,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<float> AtmosHumanoidThrowMultiplier =
             CVarDef.Create("atmos.humanoid_throw_multiplier", 2f, CVar.SERVERONLY);
 
+        #endregion
+        #region MIDI instruments
         /*
          * MIDI instruments
          */
@@ -1356,18 +1423,24 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<int> MaxMidiLaggedBatches =
             CVarDef.Create("midi.max_lagged_batches", 8, CVar.SERVERONLY);
 
+        #endregion
+        #region Holidays
         /*
          * Holidays
          */
 
         public static readonly CVarDef<bool> HolidaysEnabled = CVarDef.Create("holidays.enabled", true, CVar.SERVERONLY);
 
+        #endregion
+        #region Branding stuff
         /*
          * Branding stuff
          */
 
         public static readonly CVarDef<bool> BrandingSteam = CVarDef.Create("branding.steam", false, CVar.CLIENTONLY);
 
+        #endregion
+        #region OOC
         /*
          * OOC
          */
@@ -1391,6 +1464,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<bool> ShowOocPatronColor =
             CVarDef.Create("ooc.show_ooc_patron_color", true, CVar.ARCHIVE | CVar.REPLICATED | CVar.CLIENT);
 
+        #endregion
+        #region LOOC
         /*
          * LOOC
          */
@@ -1412,11 +1487,15 @@ namespace Content.Shared.CCVar
         /// </summary>
         public static readonly CVarDef<bool> CritLoocEnabled = CVarDef.Create("looc.enabled_crit", false, CVar.NOTIFY | CVar.REPLICATED);
 
+        #endregion
+        #region Entity Menu Grouping Types
         /*
          * Entity Menu Grouping Types
          */
         public static readonly CVarDef<int> EntityMenuGroupingType = CVarDef.Create("entity_menu", 0, CVar.CLIENTONLY);
 
+        #endregion
+        #region Whitelist
         /*
          * Whitelist
          */
@@ -1445,6 +1524,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<int> WhitelistMaxPlayers =
             CVarDef.Create("whitelist.max_players", int.MaxValue, CVar.SERVERONLY);
 
+        #endregion
+        #region VOTE
         /*
          * VOTE
          */
@@ -1529,6 +1610,8 @@ namespace Content.Shared.CCVar
             VoteTimerAlone = CVarDef.Create("vote.timeralone", 10, CVar.SERVERONLY);
 
 
+        #endregion
+        #region BAN
         /*
          * BAN
          */
@@ -1536,6 +1619,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<bool> BanHardwareIds =
             CVarDef.Create("ban.hardware_ids", true, CVar.SERVERONLY);
 
+        #endregion
+        #region Procgen
         /*
          * Procgen
          */
@@ -1546,6 +1631,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<bool> ProcgenPreload =
             CVarDef.Create("procgen.preload", true, CVar.SERVERONLY);
 
+        #endregion
+        #region Shuttles
         /*
          * Shuttles
          */
@@ -1596,6 +1683,19 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<bool> GridFill =
             CVarDef.Create("shuttle.grid_fill", true, CVar.SERVERONLY);
 
+        ///<summary>
+        /// the Entropic decay of energy combined with the minimal but existent particles that would slow the vessel down
+        ///</summary>
+        public static readonly CVarDef<float> SpaceFrictionStrength =
+            CVarDef.Create("shuttle.space_friction_strength", 0.0015f, CVar.REPLICATED);
+        ///<summary>
+        /// the strength of drag when the inertia dampeners are set to anchor to slow the vessel down and hold it in place
+        ///</summary>
+        public static readonly CVarDef<float> AnchorDampeningStrength =
+            CVarDef.Create("shuttle.ancho_dampening_strength", 0.5f, CVar.REPLICATED);
+
+        #endregion
+        #region Emergency
         /*
          * Emergency
          */
@@ -1656,6 +1756,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<int> EmergencyShuttleAutoCallExtensionTime =
             CVarDef.Create("shuttle.auto_call_extension_time", 30, CVar.SERVERONLY);
 
+        #endregion
+        #region Crew Manifests
         /*
          * Crew Manifests
          */
@@ -1678,6 +1780,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<bool> CrewManifestUnsecure =
             CVarDef.Create("crewmanifest.unsecure", true, CVar.REPLICATED);
 
+        #endregion
+        #region Biomass
         /*
          * Biomass
          */
@@ -1689,6 +1793,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<bool> BiomassEasyMode =
             CVarDef.Create("biomass.easy_mode", false, CVar.SERVERONLY);
 
+        #endregion
+        #region Anomaly
         /*
          * Anomaly
          */
@@ -1699,6 +1805,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<float> AnomalyGenerationGridBoundsScale =
             CVarDef.Create("anomaly.generation_grid_bounds_scale", 0.6f, CVar.SERVERONLY);
 
+        #endregion
+        #region VIEWPORT
         /*
          * VIEWPORT
          */
@@ -1728,6 +1836,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<int> ViewportWidth =
             CVarDef.Create("viewport.width", 21, CVar.CLIENTONLY | CVar.ARCHIVE);
 
+        #endregion
+        #region FOV
         /*
          * FOV
          */
@@ -1745,6 +1855,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<int> ZoomLevels =
             CVarDef.Create("fov.zoom_levels", 7, CVar.SERVER | CVar.REPLICATED);
 
+        #endregion
+        #region UI
         /*
          * UI
          */
@@ -1758,6 +1870,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<string> SeparatedScreenChatSize =
             CVarDef.Create("ui.separated_chat_size", "0.6,0", CVar.CLIENTONLY | CVar.ARCHIVE);
 
+        #endregion
+        #region Accessibility
 
         /*
         * Accessibility
@@ -1795,6 +1909,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<bool> AccessibilityColorblindFriendly =
             CVarDef.Create("accessibility.colorblind_friendly", false, CVar.CLIENTONLY | CVar.ARCHIVE);
 
+        #endregion
+        #region CHAT
         /*
          * CHAT
          */
@@ -1859,6 +1975,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<string> MOTD =
             CVarDef.Create("chat.motd", "", CVar.SERVER | CVar.SERVERONLY | CVar.ARCHIVE, "A message broadcast to each player that joins the lobby.");
 
+        #endregion
+        #region AFK
         /*
          * AFK
          */
@@ -1869,6 +1987,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<float> AfkTime =
             CVarDef.Create("afk.time", 60f, CVar.SERVERONLY);
 
+        #endregion
+        #region IC
         /*
          * IC
          */
@@ -1915,6 +2035,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<bool> ICShowSSDIndicator =
             CVarDef.Create("ic.show_ssd_indicator", true, CVar.CLIENTONLY);
 
+        #endregion
+        #region Salvage
         /*
          * Salvage
          */
@@ -1931,6 +2053,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<float>
             SalvageExpeditionCooldown = CVarDef.Create("salvage.expedition_cooldown", 780f, CVar.REPLICATED);
 
+        #endregion
+        #region Flavor
         /*
          * Flavor
          */
@@ -1942,6 +2066,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<int>
             FlavorLimit = CVarDef.Create("flavor.limit", 10, CVar.SERVERONLY);
 
+        #endregion
+        #region Mapping
         /*
          * Mapping
          */
@@ -1965,6 +2091,8 @@ namespace Content.Shared.CCVar
             AutosaveDirectory = CVarDef.Create("mapping.autosave_dir", "Autosaves", CVar.SERVERONLY);
 
 
+        #endregion
+        #region Rules
         /*
          * Rules
          */
@@ -1982,6 +2110,8 @@ namespace Content.Shared.CCVar
             CVarDef.Create("rules.exempt_local", true, CVar.SERVERONLY);
 
 
+        #endregion
+        #region Autogeneration
         /*
          * Autogeneration
          */
@@ -1989,6 +2119,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<string> DestinationFile =
             CVarDef.Create("autogen.destination_file", "", CVar.SERVER | CVar.SERVERONLY);
 
+        #endregion
+        #region Network Resource Manager
         /*
          * Network Resource Manager
          */
@@ -2007,6 +2139,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<int> ResourceUploadingStoreDeletionDays =
             CVarDef.Create("netres.store_deletion_days", 30, CVar.SERVER | CVar.SERVERONLY);
 
+        #endregion
+        #region Controls
         /*
          * Controls
          */
@@ -2023,6 +2157,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<bool> ToggleWalk =
             CVarDef.Create("control.toggle_walk", false, CVar.CLIENTONLY | CVar.ARCHIVE);
 
+        #endregion
+        #region STORAGE
         /*
          * STORAGE
          */
@@ -2039,6 +2175,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<bool> OpaqueStorageWindow =
             CVarDef.Create("control.opaque_storage_background", false, CVar.CLIENTONLY | CVar.ARCHIVE);
 
+        #endregion
+        #region UPDATE
         /*
          * UPDATE
          */
@@ -2049,6 +2187,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<float> UpdateRestartDelay =
             CVarDef.Create("update.restart_delay", 20f, CVar.SERVERONLY);
 
+        #endregion
+        #region Ghost
         /*
          * Ghost
          */
@@ -2059,6 +2199,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<float> GhostRoleTime =
             CVarDef.Create("ghost.role_time", 8f, CVar.REPLICATED | CVar.SERVER);
 
+        #endregion
+        #region Fire alarm
         /*
          * Fire alarm
          */
@@ -2071,6 +2213,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<bool> FireAlarmAllAccess =
             CVarDef.Create("firealarm.allaccess", true, CVar.SERVERONLY);
 
+        #endregion
+        #region PLAYTIME
         /*
          * PLAYTIME
          */
@@ -2081,6 +2225,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<float>
             PlayTimeSaveInterval = CVarDef.Create("playtime.save_interval", 900f, CVar.SERVERONLY);
 
+        #endregion
+        #region INFOLINKS
         /*
          * INFOLINKS
          */
@@ -2133,6 +2279,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<string> InfoLinksAppeal =
             CVarDef.Create("infolinks.appeal", "", CVar.SERVER | CVar.REPLICATED);
 
+        #endregion
+        #region CONFIG
         /*
          * CONFIG
          */
@@ -2166,6 +2314,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<bool> ConfigPresetDebug =
             CVarDef.Create("config.preset_debug", true, CVar.SERVERONLY);
 
+        #endregion
+        #region World Generation
         /*
          * World Generation
          */
@@ -2187,6 +2337,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<int> GCMaximumTimeMs =
             CVarDef.Create("entgc.maximum_time_ms", 5, CVar.SERVERONLY);
 
+        #endregion
+        #region Replays
         /*
          * Replays
          */
@@ -2226,6 +2378,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<string> ReplayAutoRecordTempDir =
             CVarDef.Create("replay.auto_record_temp_dir", "", CVar.SERVERONLY);
 
+        #endregion
+        #region Miscellaneous
         /*
          * Miscellaneous
          */
@@ -2233,6 +2387,8 @@ namespace Content.Shared.CCVar
         public static readonly CVarDef<bool> GatewayGeneratorEnabled =
             CVarDef.Create("gateway.generator_enabled", true);
 
+        #endregion
+        #region DEBUG
         /*
          * DEBUG
          */
@@ -2244,6 +2400,8 @@ namespace Content.Shared.CCVar
             CVarDef.Create("debug.option_visualizer_test", false, CVar.CLIENTONLY);
 
         /// DELTA-V CCVARS
+        #endregion
+        #region Glimmer
         /*
          * Glimmer
          */
@@ -2291,8 +2449,11 @@ namespace Content.Shared.CCVar
         /// </summary>
         public static readonly CVarDef<float> StationGoalsChance =
             CVarDef.Create("game.station_goals_chance", 0.1f, CVar.SERVERONLY);
-
+        #endregion
         #region Contests System
+        /*
+         * Contests System
+         */
 
         /// <summary>
         ///     The MASTER TOGGLE for the entire Contests System.
@@ -2340,8 +2501,10 @@ namespace Content.Shared.CCVar
             CVarDef.Create("contests.max_percentage", 0.25f, CVar.REPLICATED | CVar.SERVER);
 
         #endregion
-
         #region Supermatter System
+        /*
+         * Supermatter System
+         */
 
         /// <summary>
         ///     With completely default supermatter values, Singuloose delamination will occur if engineers inject at least 900 moles of coolant per tile

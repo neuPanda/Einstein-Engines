@@ -110,6 +110,8 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
         ActualRadarRange = Math.Clamp(ActualRadarRange, WorldMinRange, WorldMaxRange);
 
         _docks = state.Docks;
+
+        NfUpdateState(state); // Frontier Update State
     }
 
     protected override void Draw(DrawingHandleScreen handle)
